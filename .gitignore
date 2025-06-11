@@ -1,0 +1,141 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.pyd
+*.pyo
+*.pyi
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating System
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Voice Data and Generated Content
+voices/
+generated/
+temp/
+logs/
+models/
+audio_samples/
+voice_profiles/
+recordings/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+local_voice_db.json
+
+# Audio Files (keep only examples)
+*.wav
+*.mp3
+*.flac
+*.m4a
+*.ogg
+*.aac
+!example_*.wav
+!sample_*.wav
+
+# Temporary Files
+tmp/
+*.tmp
+*.temp
+*~
+.#*
+\#*#
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Machine Learning Models
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+*.onnx
+*.pt
+*.pth
+*.tflite
+
+# Large Files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# API Keys and Secrets
+secrets.json
+keys.json
+credentials.json
+config_secret.py
+
+# FastAPI
+.pytest_cache/
+
+# Node.js (if any frontend dependencies)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+
+# Test artifacts
+.pytest_cache/
+test_output/
+test_results/
+
+# Specific to this project
+-p/
+.git/

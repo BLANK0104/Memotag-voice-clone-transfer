@@ -1,0 +1,59 @@
+# Docker ignore file
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.log
+*.pot
+*.so
+.tox
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+.mypy_cache
+.pytest_cache
+.hypothesis
+
+# Environment files
+.env
+.venv
+env/
+venv/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+temp/*
+!temp/.gitkeep
+
+# Generated files (mount as volumes instead)
+generated/*
+!generated/.gitkeep
+voices/*
+!voices/.gitkeep
+logs/*
+!logs/.gitkeep
+models/*
+!models/.gitkeep
+
+# Node modules (if any)
+node_modules/
+
+# Documentation (optional, comment out if you want docs in container)
+docs/
+*.md
+!README.md

@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  hinglish-voice-app:
+    build: .
+    container_name: hinglish-voice-cloning
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    volumes:
+      # Persist generated audio files
+      - ./generated:/app/generated
+      - ./voices:/app/voices
+      - ./temp:/app/temp
+      - ./logs:/app/logs
+      # Mount models directory for voice models
+      - ./models:/app/models
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Optional: Redis for caching (if you want to add caching later)
+  # redis:
+  #   image: redis:7-alpine
+  #   container_name: hinglish-voice-redis
+  #   ports:
+  #     - "6379:6379"
+  #   restart: unless-stopped
+
+networks:
+  default:
+    name: hinglish-voice-network
